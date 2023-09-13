@@ -1,0 +1,25 @@
+@include media-breakpoint-up(md) {
+    .main {
+
+
+    }
+    
+    
+    .options {
+    
+        
+        height: auto;
+    
+        &__widgets {
+            width: 10%;
+            
+            
+    
+            &--lgItems,
+            &--mdItems,
+            &--smItems {
+                width: 30px;
+            }
+        }
+    }
+}

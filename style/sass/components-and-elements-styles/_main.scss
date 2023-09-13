@@ -1,0 +1,22 @@
+.main {
+
+
+}
+
+
+.options {
+
+    
+    height: 80px;
+
+    &__widgets {
+        width: 80px;
+        
+
+        &--lgItems,
+        &--mdItems,
+        &--smItems {
+            width: 20px;
+        }
+    }
+}

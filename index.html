@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./style/css/main.css">
+    <link rel="stylesheet" href="./style/css/bootstrap.min.css">
 </head>
 
 
@@ -12,35 +14,49 @@
 <body>
 
     <!-- Header::start -->
-    <header></header>
+    <header>
+        <nav class="nav-mob">
+
+            <!-- <li></li>
+            <li></li> -->
+
+        </nav>
+
+        <nav class="nav-desk">
+
+        </nav>
+    </header>
     <!-- Header::end -->
 
 
-    
+
 
 
 
 
     <main>
-        
-        
+
+
         <!-- Container for the cards, options, ... -->
 
-        <div class="main">
+        <div class="main d-flex flex-column justify-content-center align-items-center w-100">
 
-             <!-- The options for organinzing the cards::start -->
-            <div class="main__options">
+            <!-- The options for organinzing the cards::start -->
+            <div class="options d-flex flex-row-reverse justify-content-between align-items-center w-100 p-1 p-md-5">
 
                 <!-- The options for organinzing the cards => widgets::start -->
-                <div class="main__options__widgets">
-                    <div class="main__options__widgets--lgItems">
-
+                <div class="options__widgets d-flex justify-content-between flex-row-reverse align-items-center">
+                    <div class="options__widgets--lgItems">
+                        <img class="options__widgets--lgItems--eightSquares"
+                            src="./assets/icons/widgets/eight-squares.png" alt="eight-squares">
                     </div>
-                    <div class="main__options__widgets--mdItems">
-
+                    <div class="options__widgets--mdItems">
+                        <img class="options__widgets--mdItems--fourSquares"
+                            src="./assets/icons/widgets/four-squares.png" alt="four-squares">
                     </div>
-                    <div class="main__options__widgets--smItems">
-
+                    <div class="options__widgets--smItems">
+                        <img class="options__widgets--smItems--oneSquare" src="./assets/icons/widgets/one-square.png"
+                            alt="one-square">
                     </div>
                 </div>
                 <!-- The options for organinzing the cards => widgets::end -->
@@ -48,11 +64,14 @@
 
 
                 <!-- The options for organinzing the cards => filter::start -->
-                <div class="main__options__filter">
-                    <div class="main__options__filter--"></div>
-                    <div class="main__options__filter--"></div>
-                    <div class="main__options__filter--"></div>
-                    <div class="main__options__filter--"></div>
+                <div class="options__filter d-flex justify-content-end align-items-center">
+                    <button class="options__filter--btn">Filter</button>
+                    <div class="options__filter--list d-flex ">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
                 <!-- The options for organinzing the cards => filter::end -->
 
@@ -68,46 +87,49 @@
 
 
             <!-- Cards container::start -->
-            <div class="main__cardsContainer">
+            <div class="main__cardsContainer w-100 p-3 p-md-4 p-lg-5">
 
 
                 <!-- Single card::start -->
-                <div class="main__cardsContainer__card">
+                <div class="myCard d-flex flex-column justify-content-between align-items-center p-2 col-md-4">
 
 
                     <!-- Single card => Container of card's image::start -->
-                   <div class="main__cardsContainer__card__imgContainer">
-
-
-                        <div class="main__cardsContainer__card__imgContainer--frame"></div>
-
-                        <div class="main__cardsContainer__card__imgContainer--img"></div>
-
-                        <div class="main__cardsContainer__card__imgContainer--btn"></div>
-
-                        <div class="main__cardsContainer__card__imgContainer--tag"></div>
-
-
-                   </div>
-                   <!-- Single card => Container of image::end -->
+                    <div class="myCard__imgContainer d-flex justify-content-center align-items-center position-relative w-100 h-50">
 
 
 
-                   <!-- Single card => Container of card's info::start -->
-                   <div class="main__cardsContainer__card__detailContainer">
-
-
-                        <div class="main__cardsContainer__card__detailContainer--title"></div>
-
-                        
-                        <div class="main__cardsContainer__card__detailContainer--info">
-                            <div class="main__cardsContainer__card__detailContainer--info--price"></div>
-                            <div class="main__cardsContainer__card__detailContainer--info--rate"></div>
+                        <div class="myCard__imgContainer--img   position-absolute top-0 ">
+                            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg">
                         </div>
 
+                        
 
-                   </div>
-                   <!-- Single card => Container of card's info::end -->
+                        <div class="myCard__imgContainer--tag"></div>
+
+
+                    </div>
+                    <!-- Single card => Container of image::end -->
+
+
+
+                    <!-- Single card => Container of card's info::start -->
+                    <div class="myCard__detailContainer d-flex flex-column justify-content-evenly align-items-center w-100 p-2 h-50">
+
+                    
+                        <h2 class="myCard__detailContainer--title">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h2>
+
+
+                        <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center w-75">
+                            <div class="myCard__detailContainer--info--price">Price: 109.95</div>
+                            <div class="myCard__detailContainer--info--rate">Rate: 3.9</div>
+                        </div>
+
+                        <button class="myCard__detailContainer--btn ">Quick Add</button>
+
+
+                    </div>
+                    <!-- Single card => Container of card's info::end -->
 
 
 
@@ -141,4 +163,5 @@
 
 
 </body>
+
 </html>
