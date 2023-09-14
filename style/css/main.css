@@ -1492,28 +1492,66 @@ button {
   width: 100%;
 }
 .myCard__detailContainer--btn {
-  padding: 5px 10px;
+  padding: 4px 8px;
   border: 1px solid black;
 }
 
 @media (min-width: 576px) {
   .myCard {
-    margin: 0 !important;
+    aspect-ratio: 1.6/2;
+  }
+  .myCard.col-sm-6 .myCard__detailContainer--title {
+    font-size: 1.5vw;
+    min-width: 85%;
+    max-width: 85%;
+  }
+  .myCard.col-sm-6 .myCard__detailContainer--info {
+    max-width: 70%;
+  }
+  .myCard.col-sm-6 .myCard__detailContainer--info--price, .myCard.col-sm-6 .myCard__detailContainer--info--rate {
+    font-size: 1.3vw;
+  }
+  .myCard.col-sm-6 .myCard__detailContainer--btn {
+    font-size: 1vw;
+  }
+  .myCard.col-sm-4 .myCard__detailContainer--title {
+    font-size: 1.2vw;
+    min-width: 85%;
+  }
+  .myCard.col-sm-4 .myCard__detailContainer--info {
+    max-width: 85%;
+  }
+  .myCard.col-sm-4 .myCard__detailContainer--info--price, .myCard.col-sm-4 .myCard__detailContainer--info--rate {
+    font-size: 1vw;
+  }
+  .myCard.col-sm-4 .myCard__detailContainer--btn {
+    font-size: 0.8vw;
+  }
+  .myCard.col-sm-3 .myCard__detailContainer--title {
+    font-size: 0.9vw;
+    min-width: 85%;
+  }
+  .myCard.col-sm-3 .myCard__detailContainer--info {
+    max-width: 75%;
+  }
+  .myCard.col-sm-3 .myCard__detailContainer--info--price, .myCard.col-sm-3 .myCard__detailContainer--info--rate {
+    font-size: 0.8vw;
+  }
+  .myCard.col-sm-3 .myCard__detailContainer--btn {
+    font-size: 0.6vw;
   }
   .myCard__imgContainer {
-    width: 75%;
+    width: 100%;
   }
   .myCard__imgContainer--img {
-    width: 40%;
+    width: 35%;
     margin: auto;
   }
   .myCard__detailContainer--title {
-    font-size: 0.5vw;
     text-align: center;
   }
   .myCard__detailContainer--btn {
-    padding: 10px;
+    padding: 10px 15px;
     border: 1px solid black;
-    font-size: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */

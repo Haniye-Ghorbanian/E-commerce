@@ -1,19 +1,115 @@
+
+// condition for customizing item sizes in desktop view
+@mixin items-size-desk($two-per-row: true) {
+
+    @if $two-per-row {
+
+        .myCard {
+            &__detailContainer{
+                &--title {
+                    font-size: 1.5vw;
+                    min-width: 85%;
+                    max-width: 85%;
+                }
+
+                &--info {
+                    max-width: 70%;
+                    &--price,
+                    &--rate {
+                        font-size: 1.3vw;
+                    }
+                }
+
+                &--btn {
+                    font-size: 1vw;
+                }
+            }
+        }
+
+    }
+
+
+    @else {
+        .myCard {
+           
+            &__detailContainer{
+                &--title {
+                    font-size: 1.2vw;
+                    min-width: 85%;
+                }
+
+                &--info {
+                    max-width: 85%;
+                    &--price,
+                    &--rate {
+                        font-size: 1vw;
+                    }
+                }
+
+                &--btn {
+                    font-size: .8vw;
+                }
+            }
+        }
+    }
+}
+
+@mixin items-size-desk-2($four-per-row: true) {
+    @if $four-per-row {
+
+        .myCard {
+            &__detailContainer{
+                &--title {
+                    font-size: .9vw;
+                    min-width: 85%;
+                }
+
+                &--info {
+                    max-width: 75%;
+                    &--price,
+                    &--rate {
+                        font-size: .8vw;
+                    }
+                }
+
+                &--btn {
+                    font-size: .6vw;
+                }
+            }
+        }
+
+    }
+}
+
+
+
 @include media-breakpoint-up(sm) {
+
+
     .myCard {
 
-        margin: 0 !important;
+        aspect-ratio: 1.6 / 2;
+
+        &.col-sm-6 {
+            @include items-size-desk($two-per-row: true);
+        }
+    
+        &.col-sm-4 {
+            @include items-size-desk($two-per-row: false);
+        }
+
+        &.col-sm-3 {
+            @include items-size-desk-2($four-per-row: true);
+        }
         
-
-
-
         &__imgContainer {
-            width: 75%;
+            width: 100%;
 
 
 
 
             &--img {
-                width: 40%;
+                width: 35%;
                 margin: auto;
             }
 
@@ -24,14 +120,12 @@
         &__detailContainer {
 
             &--title {
-                font-size: .5vw;
                 text-align: center;
             }
 
             &--btn {
-                padding: 10px;
+                padding:  10px 15px;
                 border: 1px solid black;
-                font-size: 1rem;
             }
         }
     }
