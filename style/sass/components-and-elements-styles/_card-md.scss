@@ -1,38 +1,37 @@
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
     .myCard {
 
         margin: 0 !important;
-        height: 500px;
-    
-    
+        
+
+
+
         &__imgContainer {
-            
-            
-    
-          
-    
+            width: 75%;
+
+
+
+
             &--img {
                 width: 40%;
                 margin: auto;
-               
-                
             }
-    
-            
+
+
         }
-    
-    
+
+
         &__detailContainer {
-    
+
             &--title {
-                font-size: 1rem;
+                font-size: .5vw;
                 text-align: center;
             }
-    
+
             &--btn {
                 padding: 10px;
                 border: 1px solid black;
-               font-size: 1rem;
+                font-size: 1rem;
             }
         }
     }
