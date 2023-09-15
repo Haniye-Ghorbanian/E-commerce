@@ -7,6 +7,8 @@
     <title>E-commerce</title>
     <link rel="stylesheet" href="./style/css/main.css">
     <link rel="stylesheet" href="./style/css/bootstrap.min.css">
+    <!-- <script src="./JS/modules.js"></script> -->
+    <script src="./JS/app.js" defer></script>
 </head>
 
 
@@ -87,26 +89,20 @@
 
 
             <!-- Cards container::start -->
-            <div class="main__cardsContainer d-flex flex-wrap w-100 p-3 p-md-4 p-lg-5 m-3">
+            <div class="main__cardsContainer CARDS_CONTAINER d-flex flex-wrap w-100 p-3 p-md-4 p-lg-5 m-3">
 
 
                 <!-- Single card::start -->
-                <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-3 col-12 p-3">
+                <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-4 col-12 p-3">
 
 
                     <!-- Single card => Container of card's image::start -->
-                    <div class="myCard__imgContainer d-flex justify-content-center align-items-center position-relative h-25 mb-md-4">
+                    <div class="myCard__imgContainer d-flex justify-content-center align-items-center h-25 mb-md-4">
 
 
-
-                        <div class="myCard__imgContainer--img   position-absolute top-0 ">
+                        <div class="myCard__imgContainer--img">
                             <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg">
                         </div>
-
-                        
-
-
-                        <div class="myCard__imgContainer--tag"></div>
 
 
                     </div>
@@ -115,13 +111,15 @@
 
 
                     <!-- Single card => Container of card's info::start -->
-                    <div class="myCard__detailContainer d-flex flex-column justify-content-md-start align-items-center w-100 p-2 h-75">
+                    <div class="myCard__detailContainer d-flex flex-column justify-content-md-start justify-content-evenly align-items-center  w-100 p-2 h-75">
 
                     
-                          <h2 class="myCard__detailContainer--title mb-md-4">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h2> 
+                          <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h2> 
+
+                          <h3 class="myCard__detailContainer--title">men's clothing</h3>
 
 
-                        <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center mb-md-4">
+                        <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center mb-lg-4 mb-md-3">
                             <div class="myCard__detailContainer--info--price">Price: 109.95</div>
                             <div class="myCard__detailContainer--info--rate">Rate: 3.9</div>
                         </div> 

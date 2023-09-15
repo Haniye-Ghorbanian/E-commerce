@@ -6,14 +6,24 @@
     @if $one-per-row {
 
         .myCard {
+
+            &__imgContainer {
+
+                &--tag {
+                    font-size: 3vw;
+                    bottom: -40px;
+                }
+            }
+
+
             &__detailContainer{
                 &--title {
-                    font-size: 5vw;
+                    font-size: 4.8vw;
                     min-width: 85%;
                 }
 
                 &--info {
-                    max-width: 75%;
+                    min-width: 75%;
                     &--price,
                     &--rate {
                         font-size: 4.5vw;
@@ -76,13 +86,17 @@
             width: 50%;
             max-width: 100%;
         }
+
+        &--tag {
+            padding: 3px 6px;
+            color: gray;
+        }
     }
 
     &__detailContainer {
         flex: 1;
 
         &--title {
-            // font-size: 3vw; 
             text-align: center;
             width: 100%;
         }

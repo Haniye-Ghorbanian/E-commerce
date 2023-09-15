@@ -1443,12 +1443,16 @@ button {
 .myCard {
   aspect-ratio: 1/1.6;
 }
+.myCard.col-12 .myCard__imgContainer--tag {
+  font-size: 3vw;
+  bottom: -40px;
+}
 .myCard.col-12 .myCard__detailContainer--title {
-  font-size: 5vw;
+  font-size: 4.8vw;
   min-width: 85%;
 }
 .myCard.col-12 .myCard__detailContainer--info {
-  max-width: 75%;
+  min-width: 75%;
 }
 .myCard.col-12 .myCard__detailContainer--info--price, .myCard.col-12 .myCard__detailContainer--info--rate {
   font-size: 4.5vw;
@@ -1478,6 +1482,10 @@ button {
 .myCard__imgContainer--img {
   width: 50%;
   max-width: 100%;
+}
+.myCard__imgContainer--tag {
+  padding: 3px 6px;
+  color: gray;
 }
 .myCard__detailContainer {
   -webkit-box-flex: 1;
