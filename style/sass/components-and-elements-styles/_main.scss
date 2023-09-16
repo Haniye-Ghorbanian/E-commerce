@@ -1,22 +1,44 @@
-.main {
-
-
-}
+.main {}
 
 
 .options {
 
-    
+
     height: 80px;
 
     &__widgets {
-        
-        
+
+
 
         &--lgItems,
         &--mdItems,
         &--smItems {
             width: 6vw;
+        }
+    }
+
+
+    &__filter {
+
+        &--btn {}
+
+        &--list {
+            
+            box-shadow: none;
+            top: 20px;
+            left: 10px;
+            width: 300px;
+
+
+            &--option {
+                font-size: 3vw;
+                font-weight: 400;
+                padding: 3px 9px;
+                border: 1px solid black;
+                text-align: center;
+                margin: 5px 15px !important;
+               
+            }
         }
     }
 }

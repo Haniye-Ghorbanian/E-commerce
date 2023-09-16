@@ -7,8 +7,10 @@
     <title>E-commerce</title>
     <link rel="stylesheet" href="./style/css/main.css">
     <link rel="stylesheet" href="./style/css/bootstrap.min.css">
-    <!-- <script src="./JS/modules.js"></script> -->
-    <script src="./JS/app.js" defer></script>
+    <script src="./JS/modals.js"></script>
+    <script src="./JS/displaying cards.js" defer></script>
+    <script src="./JS/filter.js" defer></script>
+
 </head>
 
 
@@ -44,7 +46,7 @@
         <div class="main d-flex flex-column justify-content-center align-items-center w-100">
 
             <!-- The options for organinzing the cards::start -->
-            <div class="options d-flex flex-row-reverse justify-content-between align-items-center w-100 p-1 p-md-5">
+            <div class="options position-relative d-flex flex-row-reverse justify-content-between align-items-center w-100 p-1 p-md-5">
 
                 <!-- The options for organinzing the cards => widgets::start -->
                 <div class="options__widgets d-flex justify-content-between flex-row-reverse align-items-center w-25">
@@ -68,11 +70,11 @@
                 <!-- The options for organinzing the cards => filter::start -->
                 <div class="options__filter d-flex justify-content-end align-items-center">
                     <button class="options__filter--btn">Filter</button>
-                    <div class="options__filter--list d-flex ">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+
+                    <div class="options__filter--list position-absolute d-flex flex-wrap FILTER_OPTIONS">
+
+                        <!-- filter options created using api  -->
+                       
                     </div>
                 </div>
                 <!-- The options for organinzing the cards => filter::end -->
@@ -111,12 +113,12 @@
 
 
                     <!-- Single card => Container of card's info::start -->
-                    <div class="myCard__detailContainer d-flex flex-column justify-content-md-start justify-content-evenly align-items-center  w-100 p-2 h-75">
+                    <div class="myCard__detailContainer d-flex flex-column justify-content-md-start justify-content-evenly align-items-center w-100 p-2 h-75">
 
                     
                           <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h2> 
 
-                          <h3 class="myCard__detailContainer--title">men's clothing</h3>
+                          <h3 class="myCard__detailContainer--category">men's clothing</h3>
 
 
                         <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center mb-lg-4 mb-md-3">

@@ -1,5 +1,5 @@
 
-const cantainer = document.querySelector('.CARDS_CONTAINER');
+const CARDS_CONTAINER = document.querySelector('.CARDS_CONTAINER');
 
 
 fetch('https://fakestoreapi.com/products')
@@ -8,7 +8,7 @@ fetch('https://fakestoreapi.com/products')
                 return showData(data)
             })
             .catch(()=>{
-                cantainer.innerHTML="error";
+               
             })
 
 
@@ -22,7 +22,7 @@ function categoryFinder(category) {
                 return showData(data)
             })
             .catch(()=>{
-                cantainer.innerHTML="error";
+                
             })
 }
 
@@ -72,13 +72,16 @@ function showData(products) {
 
     </div>
 
-    <!-- Single card::end -->`
+    <!-- Single card::end -->\n`
 })
    
 
 
-    cantainer.innerHTML = template.join('')
+    CARDS_CONTAINER.innerHTML = template.join('')
+  
 }
+
+
 
 
 

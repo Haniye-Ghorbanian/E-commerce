@@ -1,4 +1,4 @@
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
     .main {
 
 
@@ -11,7 +11,7 @@
         height: auto;
     
         &__widgets {
-            width: 10%;
+            width: 20%;
             
             
     
