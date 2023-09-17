@@ -37,25 +37,30 @@ let filteredProducts = [];
 
 function findCategories() {
     if (this.checked) {
+
         const category = this.previousElementSibling.textContent;
         fetch(`https://fakestoreapi.com/products/category/${category}`)
             .then(res=>res.json())
             .then((products) => {
-                
-                
                 findRelatedProducts(products);
                 displayRelatedProducts();
-               
             })
     } else {
-        console.log('unchecked')
+       debugger
+       const uncheckedCategory = this.previousElementSibling.textContent;
+       deleteUncheckedCategory(uncheckedCategory);
     }
 }
 
 
 function findRelatedProducts(products) {
 products.map(product => filteredProducts.push(product));
-   
+}
+
+function deleteUncheckedCategory(uncheckedCategory) {
+    filteredProducts = filteredProducts.filter(product => product.category !== uncheckedCategory);
+    filteredProducts.length !== 0 ? displayRelatedProducts(filteredProducts) : start();
+    
 }
 
 
@@ -110,22 +115,6 @@ function displayRelatedProducts() {
 
     CARDS_CONTAINER.innerHTML = filterdTemplate.join('');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

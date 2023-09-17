@@ -1,7 +1,7 @@
 
 const CARDS_CONTAINER = document.querySelector('.CARDS_CONTAINER');
 
-
+function start() {
 fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then((data) =>{
@@ -11,24 +11,40 @@ fetch('https://fakestoreapi.com/products')
                
             })
 
+}
+
 
             
-
+            
+           
 function categoryFinder(category) {
 
     fetch(`https://fakestoreapi.com/products/category/${category}`)
             .then(res=>res.json())
             .then((data) =>{
-                return showData(data)
+                storingProducts(data)  
+            })
+            // .then((storedProducts) => {
+            //     findRelatedProducts(storedProducts)
+            // })
+            .then(() => {
+                return showData()
             })
             .catch(()=>{
                 
             })
 }
 
+let storedProducts  = []
 
-function showData(products) {
-    const template = products.map(product => {
+
+function storingProducts(products) {
+    products.map(product => storedProducts.push(product));
+}
+
+
+function showData(storedProducts) {
+    const template = storedProducts.map(product => {
     return ` <!-- Single card::start -->
 
     <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-6 col-12 p-3">
@@ -80,6 +96,10 @@ function showData(products) {
     CARDS_CONTAINER.innerHTML = template.join('')
   
 }
+
+
+
+document.addEventListener('load', start())
 
 
 
