@@ -5,7 +5,15 @@
     @if $two-per-row {
 
         .myCard {
+
+            &__imgContainer {
+                
+                width: 50%;
+                height: 50%;
+            }
+
             &__detailContainer{
+                height: 50%;
                 &--title {
                     font-size: 1.5vw;
                     min-width: 85%;
@@ -35,11 +43,24 @@
 
     @else {
         .myCard {
+            
+            
+
+            &__imgContainer {
+                
+                width: 50%;
+                height: 50%;
+            }
            
             &__detailContainer{
                 &--title {
                     font-size: 1.2vw;
                     min-width: 85%;
+                    max-width: 100%;
+                }
+
+                &--category{
+                    font-size: .9vw;
                 }
 
                 &--info {
@@ -92,7 +113,13 @@
 
     .myCard {
 
-        aspect-ratio: 1.6 / 2;
+        @include media-breakpoint-up(md) {
+            // &:hover {
+            //     border: 0.1px solid rgb(196, 194, 194);
+            //     transition: .5s;
+            // }
+        }
+        aspect-ratio: 1.6 / 2.2;
 
         &.col-sm-6 {
             @include items-size-desk($two-per-row: true);
@@ -107,14 +134,13 @@
         }
         
         &__imgContainer {
-            width: 100%;
+           
 
 
 
 
             &--img {
-                width: 35%;
-                margin: auto;
+               
             }
 
 
@@ -126,6 +152,10 @@
             &--title {
                 text-align: center;
             }
+
+            &--category{
+                margin-bottom: 15px;
+             }
 
             &--btn {
                 padding:  10px 15px;

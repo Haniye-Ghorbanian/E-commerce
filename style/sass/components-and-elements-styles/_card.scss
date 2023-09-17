@@ -72,6 +72,9 @@
 .myCard {
     aspect-ratio: 1 / 1.6;
 
+    
+    
+
     &.col-12 {
         @include items-size($one-per-row: true);
     }

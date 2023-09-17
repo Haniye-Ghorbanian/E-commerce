@@ -1444,6 +1444,28 @@ button {
   margin: 5px 15px !important;
 }
 
+@media (min-width: 768px) {
+  .main {
+    padding: 3rem;
+  }
+}
+@media (min-width: 1400px) {
+  .main {
+    padding: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .main {
+    padding: 6rem;
+  }
+}
+
 @media (min-width: 576px) {
   .options {
     height: auto;
@@ -1530,7 +1552,14 @@ button {
 
 @media (min-width: 576px) {
   .myCard {
-    aspect-ratio: 1.6/2;
+    aspect-ratio: 1.6/2.2;
+  }
+  .myCard.col-sm-6 .myCard__imgContainer {
+    width: 50%;
+    height: 50%;
+  }
+  .myCard.col-sm-6 .myCard__detailContainer {
+    height: 50%;
   }
   .myCard.col-sm-6 .myCard__detailContainer--title {
     font-size: 1.5vw;
@@ -1549,9 +1578,17 @@ button {
   .myCard.col-sm-6 .myCard__detailContainer--btn {
     font-size: 1vw;
   }
+  .myCard.col-sm-4 .myCard__imgContainer {
+    width: 50%;
+    height: 50%;
+  }
   .myCard.col-sm-4 .myCard__detailContainer--title {
     font-size: 1.2vw;
     min-width: 85%;
+    max-width: 100%;
+  }
+  .myCard.col-sm-4 .myCard__detailContainer--category {
+    font-size: 0.9vw;
   }
   .myCard.col-sm-4 .myCard__detailContainer--info {
     max-width: 85%;
@@ -1575,15 +1612,11 @@ button {
   .myCard.col-sm-3 .myCard__detailContainer--btn {
     font-size: 0.6vw;
   }
-  .myCard__imgContainer {
-    width: 100%;
-  }
-  .myCard__imgContainer--img {
-    width: 35%;
-    margin: auto;
-  }
   .myCard__detailContainer--title {
     text-align: center;
+  }
+  .myCard__detailContainer--category {
+    margin-bottom: 15px;
   }
   .myCard__detailContainer--btn {
     padding: 10px 15px;

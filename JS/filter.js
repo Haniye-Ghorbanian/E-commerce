@@ -30,8 +30,6 @@ function showCategories(categories) {
 }
 
 
-
-
 // working filters
 let filteredProducts = [];
 
@@ -56,6 +54,7 @@ function findCategories() {
 function findRelatedProducts(products) {
 products.map(product => filteredProducts.push(product));
 }
+
 
 function deleteUncheckedCategory(uncheckedCategory) {
     filteredProducts = filteredProducts.filter(product => product.category !== uncheckedCategory);
@@ -115,9 +114,6 @@ function displayRelatedProducts() {
 
     CARDS_CONTAINER.innerHTML = filterdTemplate.join('');
 }
-
-
-
 
 
 

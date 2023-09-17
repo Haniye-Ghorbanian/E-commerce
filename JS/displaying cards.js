@@ -13,9 +13,6 @@ fetch('https://fakestoreapi.com/products')
 
 }
 
-
-            
-            
            
 function categoryFinder(category) {
 
@@ -47,16 +44,16 @@ function showData(storedProducts) {
     const template = storedProducts.map(product => {
     return ` <!-- Single card::start -->
 
-    <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-6 col-12 p-3">
+    <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-4 col-12 pb-3 pt-3 ps-2 pe-2 mb-5 ">
 
 
         <!-- Single card => Container of card's image::start -->
-        <div class="myCard__imgContainer d-flex justify-content-center align-items-center h-25 mb-md-4">
+        <div class="myCard__imgContainer d-flex justify-content-center align-items-center mb-md-4">
 
 
-            <div class="myCard__imgContainer--img">
+            
                 <img src="${product.image}">
-            </div>
+         
 
 
         </div>
@@ -65,15 +62,15 @@ function showData(storedProducts) {
 
 
         <!-- Single card => Container of card's info::start -->
-        <div class="myCard__detailContainer d-flex flex-column justify-content-md-start justify-content-evenly align-items-center  w-100 p-2 h-75">
+        <div class="myCard__detailContainer d-flex flex-column justify-content-md-between justify-content-evenly align-items-center  w-100 ">
 
         
-              <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3">${product.title}</h2> 
+              <h2 class="myCard__detailContainer--title mb-2">${product.title}</h2> 
 
               <h3 class="myCard__detailContainer--category">${product.category}</h3>
 
 
-            <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center mb-lg-4 mb-md-3">
+            <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center ">
                 <div class="myCard__detailContainer--info--price">Price: ${product.price}</div>
                 <div class="myCard__detailContainer--info--rate">Rate: ${product.rating.rate}</div>
             </div> 
@@ -96,7 +93,6 @@ function showData(storedProducts) {
     CARDS_CONTAINER.innerHTML = template.join('')
   
 }
-
 
 
 document.addEventListener('load', start())

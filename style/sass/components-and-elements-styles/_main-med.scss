@@ -1,10 +1,50 @@
-@include media-breakpoint-up(sm) {
-    .main {
-
-
+@mixin main-padding($two-per-row: true) {
+    @if $two-per-row {
+        .main {
+            @include media-breakpoint-up(md) {
+                & {
+                    padding: 3rem;
+                }
+            }
+            
+            @include media-breakpoint-up(xxl) {
+                & {
+                    padding: 10rem;
+                }
+            }
+        }
     }
+
+    @else {
+        .main {
+            @include media-breakpoint-up(md) {
+                & {
+                    padding: 2rem;
+                }
+            }
+            
+            @include media-breakpoint-up(xxl) {
+                & {
+                    padding: 6rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@include main-padding($two-per-row: true);
+@include main-padding($two-per-row: false);
+
+
+@include media-breakpoint-up(sm) {
+   
     
-    
+    .main {
+       
+    }
     .options {
     
         
