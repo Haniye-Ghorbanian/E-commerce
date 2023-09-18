@@ -53,6 +53,7 @@
             }
            
             &__detailContainer{
+                height: 50%;
                 &--title {
                     font-size: 1.2vw;
                     min-width: 85%;
@@ -82,12 +83,27 @@
 @mixin items-size-desk-2($four-per-row: true) {
     @if $four-per-row {
 
+       
+
         .myCard {
+
+            &__imgContainer {
+                
+                width: 50%;
+                height: 50%;
+            }
+
+
             &__detailContainer{
+                height: 50%;
                 &--title {
                     font-size: .9vw;
                     min-width: 85%;
                 }
+
+                &--category{
+                    font-size: .8vw;
+                 }
 
                 &--info {
                     max-width: 75%;
@@ -119,7 +135,7 @@
             //     transition: .5s;
             // }
         }
-        aspect-ratio: 1.6 / 2.2;
+        aspect-ratio: 1.6 / 2.5;
 
         &.col-sm-6 {
             @include items-size-desk($two-per-row: true);
@@ -133,19 +149,7 @@
             @include items-size-desk-2($four-per-row: true);
         }
         
-        &__imgContainer {
-           
-
-
-
-
-            &--img {
-               
-            }
-
-
-        }
-
+        
 
         &__detailContainer {
 

@@ -36,6 +36,14 @@
             left: 10px;
             width: 300px;
 
+            .OPTIONS_OF_FILTER input[type="checkbox"] {
+                display: none;
+            }
+
+            .OPTIONS_OF_FILTER input[type="checkbox"]:checked ~ label {
+                background-color: black; /* Change the background color when checked */
+                color: white; /* Change the border color when checked */
+            }
 
             &--option {
                 font-size: 3vw;
@@ -44,6 +52,7 @@
                 border: 1px solid black;
                 text-align: center;
                 margin: 5px 15px !important;
+                cursor: pointer;
                
             }
         }

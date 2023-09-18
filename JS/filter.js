@@ -21,8 +21,8 @@ fetch('https://fakestoreapi.com/products/categories')
 function showCategories(categories) {
     const listOfCategories = categories.map(category => {
         return `<div class="OPTIONS_OF_FILTER">
-                    <input type="checkbox" name="filter" id="filter">
-                    <label class="options__filter--list--option" for="filter">${category}</label>
+                    <input type="checkbox" name="filter" id="filter-${category}">
+                    <label class="options__filter--list--option" for="filter-${category}">${category}</label>
                </div>`
     }) 
 

@@ -1439,6 +1439,13 @@ button {
   left: 10px;
   width: 300px;
 }
+.options__filter--list .OPTIONS_OF_FILTER input[type=checkbox] {
+  display: none;
+}
+.options__filter--list .OPTIONS_OF_FILTER input[type=checkbox]:checked ~ label {
+  background-color: black; /* Change the background color when checked */
+  color: white; /* Change the border color when checked */
+}
 .options__filter--list--option {
   font-size: 3vw;
   font-weight: 400;
@@ -1446,6 +1453,7 @@ button {
   border: 1px solid black;
   text-align: center;
   margin: 5px 15px !important;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -1569,7 +1577,7 @@ button {
 
 @media (min-width: 576px) {
   .myCard {
-    aspect-ratio: 1.6/2.2;
+    aspect-ratio: 1.6/2.5;
   }
   .myCard.col-sm-6 .myCard__imgContainer {
     width: 50%;
@@ -1599,6 +1607,9 @@ button {
     width: 50%;
     height: 50%;
   }
+  .myCard.col-sm-4 .myCard__detailContainer {
+    height: 50%;
+  }
   .myCard.col-sm-4 .myCard__detailContainer--title {
     font-size: 1.2vw;
     min-width: 85%;
@@ -1616,9 +1627,19 @@ button {
   .myCard.col-sm-4 .myCard__detailContainer--btn {
     font-size: 0.8vw;
   }
+  .myCard.col-sm-3 .myCard__imgContainer {
+    width: 50%;
+    height: 50%;
+  }
+  .myCard.col-sm-3 .myCard__detailContainer {
+    height: 50%;
+  }
   .myCard.col-sm-3 .myCard__detailContainer--title {
     font-size: 0.9vw;
     min-width: 85%;
+  }
+  .myCard.col-sm-3 .myCard__detailContainer--category {
+    font-size: 0.8vw;
   }
   .myCard.col-sm-3 .myCard__detailContainer--info {
     max-width: 75%;

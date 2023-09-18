@@ -44,7 +44,7 @@ function showData(storedProducts) {
     const template = storedProducts.map(product => {
     return ` <!-- Single card::start -->
 
-    <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-4 col-12 pb-3 pt-3 ps-2 pe-2 mb-5 ">
+    <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-3 col-12 pb-3 pt-3 ps-2 pe-2 mb-5 ">
 
 
         <!-- Single card => Container of card's image::start -->
