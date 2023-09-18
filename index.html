@@ -18,18 +18,23 @@
 
     <!-- Header::start -->
     <header>
-        <nav class="nav-mob">
 
-            <!-- <li></li>
-            <li></li> -->
-
-        </nav>
-
-        <nav class="nav-desk">
-
-        </nav>
     </header>
     <!-- Header::end -->
+
+    <!-- nav::start -->
+    <nav class="nav-mob">
+
+
+
+    </nav>
+
+    <nav class="nav-desk">
+
+    </nav>
+    <!-- nav::end -->
+
+
 
 
 
@@ -45,21 +50,50 @@
         <div class="main d-flex flex-column justify-content-center align-items-center w-100">
 
             <!-- The options for organinzing the cards::start -->
-            <div class="options position-relative d-flex flex-row-reverse justify-content-between align-items-center w-100 p-1 p-md-5">
+            <div class="options d-flex flex-row-reverse justify-content-between align-items-center w-100 p-1 p-md-3">
 
                 <!-- The options for organinzing the cards => widgets::start -->
-                <div class="options__widgets d-flex justify-content-between flex-row-reverse align-items-center w-25">
-                    <div class="options__widgets--lgItems">
-                        <img class="options__widgets--lgItems--eightSquares"
-                            src="./assets/icons/widgets/eight-squares.png" alt="eight-squares">
+                <div class="options__widgets d-flex justify-content-start flex-row-reverse align-items-center w-50">
+
+
+
+
+                    <div class="options__widgets__customization d-flex justify-content-between align-items-center">
+
+
+
+                        <div class="options__widgets__customization--lgItems">
+                            <img class="options__widgets--lgItems--eightSquares"
+                                src="./assets/icons/widgets/eight-squares.png" alt="eight-squares">
+                        </div>
+
+
+
+                        <div class="options__widgets__customization--mdItems">
+                            <img class="options__widgets--mdItems--fourSquares"
+                                src="./assets/icons/widgets/four-squares.png" alt="four-squares">
+                        </div>
+
+
+
+                        <div class="options__widgets__customization--smItems">
+                            <img class="options__widgets--smItems--oneSquare"
+                                src="./assets/icons/widgets/one-square.png" alt="one-square">
+                        </div>
+
+
                     </div>
-                    <div class="options__widgets--mdItems">
-                        <img class="options__widgets--mdItems--fourSquares"
-                            src="./assets/icons/widgets/four-squares.png" alt="four-squares">
-                    </div>
-                    <div class="options__widgets--smItems">
-                        <img class="options__widgets--smItems--oneSquare" src="./assets/icons/widgets/one-square.png"
-                            alt="one-square">
+
+
+
+
+
+                    <div class="options__widgets__sort">
+                        <select name="sort" id="sort">
+                            <option value="acsending">Acsending</option>
+
+                            <option value="decsending">Decsending</option>
+                        </select>
                     </div>
                 </div>
                 <!-- The options for organinzing the cards => widgets::end -->
@@ -67,13 +101,13 @@
 
 
                 <!-- The options for organinzing the cards => filter::start -->
-                <div class="options__filter d-flex justify-content-end align-items-center">
-                    <button class="options__filter--btn">Filter</button>
+                <div class="options__filter position-relative d-flex justify-content-start align-items-center">
+                    <button class="options__filter--btn"></button>
 
-                    <div class="options__filter--list position-absolute d-flex flex-wrap FILTER_OPTIONS">
+                    <div class="options__filter--list w-100 position-absolute d-flex flex-wrap top-0 FILTER_OPTIONS">
 
                         <!-- filter options created using api  -->
-                       
+
                     </div>
                 </div>
                 <!-- The options for organinzing the cards => filter::end -->
@@ -112,20 +146,23 @@
 
 
                     <!-- Single card => Container of card's info::start -->
-                    <div class="myCard__detailContainer d-flex flex-column justify-content-md-between justify-content-evenly align-items-center w-100 p-2 h-75">
-
-                    
-                          <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h2> 
-
-                          <h3 class="myCard__detailContainer--category">men's clothing</h3>
+                    <div
+                        class="myCard__detailContainer d-flex flex-column justify-content-md-between justify-content-evenly align-items-center w-100 p-2 h-75">
 
 
-                        <div class="myCard__detailContainer--info d-flex justify-content-between align-items-center mb-lg-4 mb-md-3">
+                        <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3">Fjallraven - Foldsack No. 1 Backpack,
+                            Fits 15 Laptops</h2>
+
+                        <h3 class="myCard__detailContainer--category">men's clothing</h3>
+
+
+                        <div
+                            class="myCard__detailContainer--info d-flex justify-content-between align-items-center mb-lg-4 mb-md-3">
                             <div class="myCard__detailContainer--info--price">Price: 109.95</div>
                             <div class="myCard__detailContainer--info--rate">Rate: 3.9</div>
-                        </div> 
+                        </div>
 
-                        <button class="myCard__detailContainer--btn">Quick Add</button> 
+                        <button class="myCard__detailContainer--btn">Quick Add</button>
 
 
                     </div>

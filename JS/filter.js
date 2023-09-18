@@ -21,8 +21,8 @@ fetch('https://fakestoreapi.com/products/categories')
 function showCategories(categories) {
     const listOfCategories = categories.map(category => {
         return `<div class="OPTIONS_OF_FILTER">
-                    <label class="options__filter--list--option" for="filter">${category}</label>
                     <input type="checkbox" name="filter" id="filter">
+                    <label class="options__filter--list--option" for="filter">${category}</label>
                </div>`
     }) 
 
@@ -36,7 +36,7 @@ let filteredProducts = [];
 function findCategories() {
     if (this.checked) {
 
-        const category = this.previousElementSibling.textContent;
+        const category = this.nextElementSibling.textContent;
         fetch(`https://fakestoreapi.com/products/category/${category}`)
             .then(res=>res.json())
             .then((products) => {
@@ -44,8 +44,8 @@ function findCategories() {
                 displayRelatedProducts();
             })
     } else {
-       debugger
-       const uncheckedCategory = this.previousElementSibling.textContent;
+      
+       const uncheckedCategory = this.nextElementSibling.textContent;
        deleteUncheckedCategory(uncheckedCategory);
     }
 }

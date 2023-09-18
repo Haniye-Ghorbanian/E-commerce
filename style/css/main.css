@@ -1425,12 +1425,16 @@ button {
 .options {
   height: 80px;
 }
-.options__widgets--lgItems, .options__widgets--mdItems, .options__widgets--smItems {
-  width: 6vw;
+.options__widgets__customization {
+  width: 30%;
+}
+.options__widgets__customization--lgItems, .options__widgets__customization--mdItems, .options__widgets__customization--smItems {
+  width: 2.5vw;
+}
+.options__widgets__sort {
+  width: 30%;
 }
 .options__filter--list {
-  -webkit-box-shadow: none;
-          box-shadow: none;
   top: 20px;
   left: 10px;
   width: 300px;
@@ -1470,11 +1474,24 @@ button {
   .options {
     height: auto;
   }
-  .options__widgets {
-    width: 20%;
+  .options__widgets__customization {
+    width: 30%;
   }
-  .options__widgets--lgItems, .options__widgets--mdItems, .options__widgets--smItems {
-    width: 30px;
+  .options__widgets__customization--lgItems, .options__widgets__customization--mdItems, .options__widgets__customization--smItems {
+    width: 2.5vw;
+  }
+  .options__widgets__sort {
+    width: 30%;
+    font-size: 1.5vw;
+  }
+  .options__filter {
+    width: 30%;
+  }
+  .options__filter--list {
+    left: 20%;
+  }
+  .options__filter--list--option {
+    font-size: 1vw;
   }
 }
 .myCard {

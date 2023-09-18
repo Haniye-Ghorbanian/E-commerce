@@ -51,14 +51,42 @@
         height: auto;
     
         &__widgets {
-            width: 20%;
             
-            
+          
+
+            &__customization {
+                width: 30%;
+
+                &--lgItems,
+                &--mdItems,
+                &--smItems {
+                    width: 2.5vw;
+                }
+            }
+
+
+            &__sort {
+                width: 30%;
+                font-size: 1.5vw;
+                
+            }
     
-            &--lgItems,
-            &--mdItems,
-            &--smItems {
-                width: 30px;
+           
+        }
+
+
+        &__filter {
+            width: 30%;
+
+            &--list {
+
+                
+                left: 20%;
+
+                &--option {
+                    font-size: 1vw;
+                    
+                }
             }
         }
     }
