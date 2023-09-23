@@ -2,6 +2,7 @@
 // Showing the categories from api
 
 const FILTER_OPTIONS = document.querySelector('.FILTER_OPTIONS');
+const FILTER_BTN = document.querySelector('.FILTER_BTN');
 
 fetch('https://fakestoreapi.com/products/categories')
             .then(res=>res.json())
@@ -14,6 +15,22 @@ fetch('https://fakestoreapi.com/products/categories')
             .catch(()=>{
                 
             })
+
+
+
+            
+
+let filterFlag = false;
+function showHideFilter() {
+    if(filterFlag == false) {
+        FILTER_OPTIONS.classList.remove('d-none');
+        filterFlag = true;
+    } else {
+        FILTER_OPTIONS.classList.add('d-none');
+        filterFlag = false;
+    }
+    
+}
 
 
 
@@ -35,20 +52,19 @@ let filteredProducts = [];
 
 function findCategories() {
     if (this.checked) {
-
         const category = this.nextElementSibling.textContent;
         fetch(`https://fakestoreapi.com/products/category/${category}`)
-            .then(res=>res.json())
+            .then(res => res.json())
             .then((products) => {
                 findRelatedProducts(products);
                 displayRelatedProducts();
-            })
+            });
     } else {
-      
-       const uncheckedCategory = this.nextElementSibling.textContent;
-       deleteUncheckedCategory(uncheckedCategory);
+        const uncheckedCategory = this.nextElementSibling.textContent;
+        deleteUncheckedCategory(uncheckedCategory);
     }
 }
+
 
 
 function findRelatedProducts(products) {
@@ -121,9 +137,12 @@ function displayRelatedProducts() {
 function handleCategories() {
     const OPTIONS_OF_FILTER =  Array.from(document.querySelectorAll('input[name="filter"]'));
     
-    OPTIONS_OF_FILTER.map(option => {
+    OPTIONS_OF_FILTER.forEach(option => {
         option.addEventListener('change', findCategories)})
 }
+
+
+FILTER_BTN.addEventListener('click', showHideFilter)
 
 
 

@@ -1,4 +1,13 @@
-.main {}
+main {
+    top: 520px;
+}
+
+
+.main {
+    padding: 2rem;
+    
+}
+
 
 
 .options {
@@ -7,6 +16,7 @@
     height: 80px;
 
     &__widgets {
+        width: 50%;
 
         &__customization {
             width: 30%;
@@ -14,13 +24,14 @@
             &--lgItems,
             &--mdItems,
             &--smItems {
-                width: 2.5vw;
+                width: 7vw;
             }
         }
 
 
         &__sort {
             width: 30%;
+            font-size: 2vw;
         }
     }
 

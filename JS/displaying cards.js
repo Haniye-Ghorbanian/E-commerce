@@ -1,50 +1,91 @@
+let HOME_PRODUCT_CARDS;
 
-const CARDS_CONTAINER = document.querySelector('.CARDS_CONTAINER');
+const CARDS_CONTAINER   = document.querySelector('.CARDS_CONTAINER');
+const HEADER            = document.querySelector('.HEADER');
+const MAIN_HOME         = document.querySelector('.MAIN_HOME');
+
+
+let storedProducts = []
 
 function start() {
-fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then((data) =>{
-                return showData(data)
-            })
-            .catch(()=>{
-               
-            })
+   
+    fetch('https://fakestoreapi.com/products')
 
-}
+        .then((res) => {
+            if (!res.ok) {
+                console.log('HTTP Error: ' + res.status);
+                console.log(res)
+            }
+            return res.json();
+        })
+        .then((data) => {
 
+            data.map(item => storedProducts.push(item))
+            showData(data)
+            changeDisplay(data)
+            hideAndShowHandler()
            
-function categoryFinder(category) {
+        })
+        
+        .catch(() => {
 
-    fetch(`https://fakestoreapi.com/products/category/${category}`)
-            .then(res=>res.json())
-            .then((data) =>{
-                storingProducts(data)  
-            })
-            // .then((storedProducts) => {
-            //     findRelatedProducts(storedProducts)
-            // })
-            .then(() => {
-                return showData()
-            })
-            .catch(()=>{
-                
-            })
+        })
+
 }
 
-let storedProducts  = []
 
 
-function storingProducts(products) {
-    products.map(product => storedProducts.push(product));
+const LARGE_BUTTON = document.querySelector('#largeButton');
+const MEDIUM_BUTTON = document.querySelector('#mediumButton');
+const SMALL_BUTTON = document.querySelector('#smallButton');
+
+
+let largeItems = false;
+let mediumItems = false;
+let smallItems = true;
+
+
+function changeDisplay() {
+    LARGE_BUTTON.addEventListener('click', () => {
+        largeItems = true;
+        mediumItems = false;
+        smallItems = false;
+       start();
+      });
+      
+      MEDIUM_BUTTON.addEventListener('click', () => {
+        largeItems = false;
+        mediumItems = true;
+        smallItems = false;
+       start();
+      });
+      
+      SMALL_BUTTON.addEventListener('click', () => {
+        largeItems = false;
+        mediumItems = false;
+        smallItems = true;
+       start();
+      });
+    
 }
+
+
+
+
+
+
+
 
 
 function showData(storedProducts) {
     const template = storedProducts.map(product => {
-    return ` <!-- Single card::start -->
+        const columnSizeSm = largeItems ? '6' : mediumItems ? '4' : smallItems ? '3' : '3';
+        return ` <!-- Single card::start -->
 
-    <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-3 col-12 pb-3 pt-3 ps-2 pe-2 mb-5 ">
+    <div class="myCard d-flex flex-column justify-content-between align-items-center 
+    col-sm-${columnSizeSm}
+    col-12 
+     pb-3 pt-3 ps-2 pe-2 mb-5 HOME_PRODUCT_CARD" data-product-id="${product.id}">
 
 
         <!-- Single card => Container of card's image::start -->
@@ -85,17 +126,20 @@ function showData(storedProducts) {
 
     </div>
 
-    <!-- Single card::end -->\n`
-})
-   
+    <!-- Single card::end -->`
+    })
+
 
 
     CARDS_CONTAINER.innerHTML = template.join('')
-  
+    HOME_PRODUCT_CARDS = Array.from(document.querySelectorAll('.HOME_PRODUCT_CARD'));
+
 }
 
 
-document.addEventListener('load', start())
+
+
+document.addEventListener('DOMContentLoaded', start())
 
 
 
