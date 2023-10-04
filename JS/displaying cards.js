@@ -1,8 +1,6 @@
 let HOME_PRODUCT_CARDS;
-
 const CARDS_CONTAINER = document.querySelector('.CARDS_CONTAINER');
-const HEADER = document.querySelector('.HEADER');
-const MAIN_HOME = document.querySelector('.MAIN_HOME');
+
 
 
 let storedProducts = []

@@ -22,6 +22,7 @@ fetch('https://fakestoreapi.com/products/categories')
 
 let filterFlag = false;
 function showHideFilter() {
+    debugger
     if(filterFlag == false) {
         FILTER_OPTIONS.classList.remove('d-none');
         filterFlag = true;
@@ -36,6 +37,7 @@ function showHideFilter() {
 
 
 function showCategories(categories) {
+    
     const listOfCategories = categories.map(category => {
         return `<div class="OPTIONS_OF_FILTER">
                     <input type="checkbox" name="filter" id="filter-${category}">
