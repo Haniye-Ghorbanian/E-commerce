@@ -51,7 +51,7 @@ function showCategories(categories) {
 filteredProducts = [];
 
 function findCategories() {
-    debugger
+    
     if (this.checked) {
         const category = this.nextElementSibling.textContent;
         fetch(`https://fakestoreapi.com/products/category/${category}`)
@@ -90,7 +90,7 @@ displayFilteredProducts = function displayRelatedProducts() {
     
     
             <!-- Single card => Container of card's image::start -->
-            <div class="myCard__imgContainer d-flex justify-content-center align-items-center h-25 mb-md-4">
+            <div class="myCard__imgContainer d-flex justify-content-center align-items-center mb-md-4">
     
     
                 <div class="myCard__imgContainer--img">
@@ -104,10 +104,10 @@ displayFilteredProducts = function displayRelatedProducts() {
     
     
             <!-- Single card => Container of card's info::start -->
-            <div class="myCard__detailContainer d-flex flex-column justify-content-md-start justify-content-evenly align-items-center  w-100 p-2 h-75">
+            <div class="myCard__detailContainer d-flex flex-column justify-content-md-start justify-content-evenly align-items-center  w-100 p-2">
     
             
-                  <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3">${filteredProduct.title}</h2> 
+                  <h2 class="myCard__detailContainer--title mb-lg-4 mb-md-3 d-flex align-items-center justify-content-center">${filteredProduct.title}</h2> 
     
                   <h3 class="myCard__detailContainer--category">${filteredProduct.category}</h3>
     

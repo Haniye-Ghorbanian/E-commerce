@@ -1657,6 +1657,7 @@ main {
   }
   .myCard__detailContainer--title {
     text-align: center;
+    height: 75px;
   }
   .myCard__detailContainer--category {
     margin-bottom: 15px;
