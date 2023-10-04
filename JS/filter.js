@@ -48,16 +48,17 @@ function showCategories(categories) {
 
 
 // working filters
-let filteredProducts = [];
+filteredProducts = [];
 
 function findCategories() {
+    debugger
     if (this.checked) {
         const category = this.nextElementSibling.textContent;
         fetch(`https://fakestoreapi.com/products/category/${category}`)
             .then(res => res.json())
             .then((products) => {
                 findRelatedProducts(products);
-                displayRelatedProducts();
+                displayFilteredProducts();
             });
     } else {
         const uncheckedCategory = this.nextElementSibling.textContent;
@@ -79,12 +80,13 @@ function deleteUncheckedCategory(uncheckedCategory) {
 }
 
 
-function displayRelatedProducts() {
+displayFilteredProducts = function displayRelatedProducts() {
     CARDS_CONTAINER.innerHTML = '';
+    columnSizeSm = largeItems ? '6' : mediumItems ? '4' : smallItems ? '3' : '3';
     const filterdTemplate = filteredProducts.map(filteredProduct => {
         return  ` <!-- Single card::start -->
 
-        <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-6 col-12 p-3">
+        <div class="myCard d-flex flex-column justify-content-between align-items-center col-sm-${columnSizeSm} col-12 p-3">
     
     
             <!-- Single card => Container of card's image::start -->
@@ -126,7 +128,7 @@ function displayRelatedProducts() {
         </div>
     
         <!-- Single card::end -->\n`
-    } )
+    })
 
     CARDS_CONTAINER.innerHTML = filterdTemplate.join('');
 }

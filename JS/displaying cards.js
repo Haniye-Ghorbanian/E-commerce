@@ -19,8 +19,8 @@ function start() {
             return res.json();
         })
         .then((data) => {
-
-            data.map(item => storedProducts.push(item))
+            storedProducts = [];
+            filteredProducts.length === 0 ? data.map(item => storedProducts.push(item)) : filteredProducts.map(item => storedProducts.push(item));
             showData(data)
             changeDisplay(data)
             hideAndShowHandler()
@@ -47,24 +47,27 @@ let smallItems = true;
 
 function changeDisplay() {
     LARGE_BUTTON.addEventListener('click', () => {
+        debugger
         largeItems = true;
         mediumItems = false;
         smallItems = false;
-       start();
+        filteredProducts.length === 0 ? start() : displayFilteredProducts();
       });
       
       MEDIUM_BUTTON.addEventListener('click', () => {
+        debugger
         largeItems = false;
         mediumItems = true;
         smallItems = false;
-       start();
+        filteredProducts.length === 0 ? start() : displayFilteredProducts();
       });
       
       SMALL_BUTTON.addEventListener('click', () => {
+        debugger
         largeItems = false;
         mediumItems = false;
         smallItems = true;
-       start();
+        filteredProducts.length === 0 ? start() : displayFilteredProducts();
       });
     
 }
@@ -79,7 +82,7 @@ function changeDisplay() {
 
 function showData(storedProducts) {
     const template = storedProducts.map(product => {
-        const columnSizeSm = largeItems ? '6' : mediumItems ? '4' : smallItems ? '3' : '3';
+        columnSizeSm = largeItems ? '6' : mediumItems ? '4' : smallItems ? '3' : '3';
         return ` <!-- Single card::start -->
 
     <div class="myCard d-flex flex-column justify-content-between align-items-center 
