@@ -1,7 +1,30 @@
 header {
-   height: 500px;
- background-color: grey;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.53);
+  background-image: url(../../../assets/bg-image/heidi-fin-2TLREZi7BUg-unsplash.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
 
-    
-   
 }
+
+header::after {
+  content: 'Welcome to Sample E-commerce Website';
+  color: white;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 100vh;
+  background: rgb(12, 12, 12);
+  background: linear-gradient(90deg, rgba(12, 12, 12, 0.7) 0%, rgba(76, 76, 79, 0.7) 50%, rgba(24, 25, 25, 0.6) 100%);
+}
+
+
