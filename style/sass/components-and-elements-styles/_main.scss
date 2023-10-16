@@ -28,15 +28,20 @@ main {
     height: 80px;
 
     &__widgets {
-        width: 50%;
+        width: 80%;
+        @media screen and (max-width: 300px) {
+            display: none;
+        }
 
         &__customization {
+           
             width: 30%;
 
             &--lgItems,
             &--mdItems,
             &--smItems {
                 width: 7vw;
+                margin: 2px;
             }
         }
 
@@ -56,7 +61,7 @@ main {
 
 
             top: 20px;
-            left: 10px;
+            left: 50px;
             width: 300px;
 
             .OPTIONS_OF_FILTER input[type="checkbox"] {

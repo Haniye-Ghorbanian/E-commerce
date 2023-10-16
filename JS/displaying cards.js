@@ -44,6 +44,8 @@ let smallItems = true;
 
 
 function changeDisplay() {
+
+   
     LARGE_BUTTON.addEventListener('click', () => {
         largeItems = true;
         mediumItems = false;

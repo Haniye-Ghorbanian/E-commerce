@@ -35,16 +35,11 @@ function getSingleProductApi(productId) {
 function showProductPageContent(product) {
    
     const singleProductPageCard = ` <!--single product page => image::start -->
-    <div class="singleProduct__image text-center w-25 m-3">
+    <div class="singleProduct__image text-center w-25 m-5">
 
         <img src="${product.image}" alt="">
 
         <!--single product page => description => product_category::start -->
-
-        <div class="PRODUCT_PAGE_CATEGORY_BTN">
-                    <input type="checkbox" name="filter" id="filter-${product.category}">
-                    <label class="options__filter--list--option" for="filter-${product.category}">${product.category}</label>
-        </div>
 
         <!--single product page => description => product_category::end -->
 
@@ -57,26 +52,23 @@ function showProductPageContent(product) {
     <!--single product page => description::start -->
 
 
-    <div class="singleProduct__info w-75">
+    <div class="singleProduct__info d-flex flex-column w-75">
 
         <!--single product page => description => product_title::start -->
-        <h2 class="singleProduct__info--title">${product.title}</h2>
+        <h2 class="singleProduct__info--title mb-5">${product.title}</h2>
         <!--single product page => description => product_title::end -->
 
 
         <!--single product page => description => product_description::start -->
-        <p class="singleProduct__info--description">${product.description}</p>
+        <p class="singleProduct__info--description mb-4">${product.description}</p>
         <!--single product page => description => product_title::end -->
 
 
-        <!--single product page => description => product_rate::start -->
-        <span class="singleProduct__info--rate">${product.rate}</span>
-        <!--single product page => description => product_rate::end -->
-
-
         <!--single product page => description => product_price::start -->
-        <span class="singleProduct__info--price">${product.price}</span>
+        <span class="singleProduct__info--price">price: ${product.price}$</span>
         <!--single product page => description => product_price::end -->
+
+        <button class="myCard__detailContainer--btn w-30 mt-3">Quick Add</button> 
     </div>
 
     <!--single product page => description::end -->`

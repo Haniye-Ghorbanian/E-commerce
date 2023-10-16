@@ -35,11 +35,11 @@
         }
 
         &--cart {
-            width: 7vw;
+            width: 5vw;
             aspect-ratio: 1 / 1;
             background-image: url(../../../assets/icons/nav/cart.png);
             background-size: cover;
-            margin-left: 10px;
+            // margin-left: 10px;
             cursor: pointer;
 
             // &::before {

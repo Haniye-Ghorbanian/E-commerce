@@ -1,8 +1,6 @@
 const beforeHeader = window.getComputedStyle(HEADER, '::before')
 function fadeShowHeader() {
     const scrollY = window.scrollY;
-    console.log(scrollY)
-
     const headerOpacity = 1 - scrollY / 100;
     const homeOpacity = 0 + scrollY / 100;
 

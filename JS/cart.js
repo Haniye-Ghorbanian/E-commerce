@@ -67,18 +67,18 @@ function renderCartProducts(products) {
         <div class="cart__products__single d-flex align-items-center justify-content-start w-100 p-3 mb-3">
         
     
-            <div class="cart__products__single--image w-25 me-5">
+            <div class="cart__products__single--image w-10 me-5">
                 <img src="${product.image}"
                     alt="">
             </div>
     
     
     
-            <div class="cart____single--detail d-flex flex-column align-items-start w-50">
+            <div class="cart__products__single--detail d-flex flex-column align-items-start w-50">
     
-                <h3 class="cart____single--detail--title mb-2">${product.title}</h3>
+                <h3 class="cart__products__single--detail--title mb-2">${product.title}</h3>
     
-                <span class="cart__products__single--detail--price">${product.price}</span>
+                <span class="cart__products__single--detail--price fw-light">Price: ${product.price}$</span>
 
             </div>
     

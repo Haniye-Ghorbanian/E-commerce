@@ -2,12 +2,14 @@
     .cart {
         top: 100px;
         z-index: -10;
+
     
         &__products {
     
             &__single{
     
                aspect-ratio: 1 / 0.5;
+               height: 300px;
     
                 &--image {
                    aspect-ratio: 1 / 1; 
@@ -15,7 +17,7 @@
     
                 &--detail {
                    &--title{
-                    font-size: 1vw !important;
+                    font-size: 2vw !important;
                    }
                    
                    &--price{

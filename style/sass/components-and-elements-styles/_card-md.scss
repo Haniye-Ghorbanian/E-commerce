@@ -55,25 +55,25 @@
             &__detailContainer{
                 height: 50%;
                 &--title {
-                    font-size: 1.2vw;
+                    font-size: 1.5vw;
                     min-width: 85%;
                     max-width: 100%;
                 }
 
                 &--category{
-                    font-size: .9vw;
+                    font-size: 1.3vw;
                 }
 
                 &--info {
                     max-width: 85%;
                     &--price,
                     &--rate {
-                        font-size: 1vw;
+                        font-size: 1.1vw;
                     }
                 }
 
                 &--btn {
-                    font-size: .8vw;
+                    font-size: .9vw;
                 }
             }
         }
@@ -97,19 +97,19 @@
             &__detailContainer{
                 height: 50%;
                 &--title {
-                    font-size: .9vw;
+                    font-size: 1vw;
                     min-width: 85%;
                 }
 
                 &--category{
-                    font-size: .8vw;
+                    font-size: 1vw;
                  }
 
                 &--info {
                     max-width: 75%;
                     &--price,
                     &--rate {
-                        font-size: .8vw;
+                        font-size: 1vw;
                     }
                 }
 
@@ -129,12 +129,7 @@
 
     .myCard {
 
-        @include media-breakpoint-up(md) {
-            // &:hover {
-            //     border: 0.1px solid rgb(196, 194, 194);
-            //     transition: .5s;
-            // }
-        }
+    
         aspect-ratio: 1.6 / 2.5;
 
         &.col-sm-6 {

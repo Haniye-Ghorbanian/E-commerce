@@ -8,7 +8,7 @@ fetch('https://fakestoreapi.com/products/categories')
             .then(res=>res.json())
             .then((categoryData) => {
                 showCategories(categoryData);
-                handleCategories()
+                handleCategories();
 
             })
             
@@ -18,7 +18,7 @@ fetch('https://fakestoreapi.com/products/categories')
 
 
 
-            
+window.innerWidth <= 400 ? CUSTOMIZATION.style.display = 'none' : '';
 
 let filterFlag = false;
 function showHideFilter() {
